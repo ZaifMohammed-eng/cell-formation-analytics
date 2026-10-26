@@ -1,0 +1,520 @@
+{
+  "public_data": {
+    "source": "Weng et al., Joule 5 (2021) 2971-2992; data doi:10.7302/pa3f-4w30",
+    "n_cells": 39,
+    "protocol_lifetime": {
+      "45C": {
+        "n_fast": 10,
+        "n_baseline": 9,
+        "fast_mean": 491.3,
+        "baseline_mean": 379.666667,
+        "gain_cycles": 111.633333,
+        "gain_ci95": [
+          77.677222,
+          145.233333
+        ],
+        "welch_p": 1.5e-05
+      },
+      "RT": {
+        "n_fast": 10,
+        "n_baseline": 10,
+        "fast_mean": 467.1,
+        "baseline_mean": 358.7,
+        "gain_cycles": 108.4,
+        "gain_ci95": [
+          78.4,
+          136.7
+        ],
+        "welch_p": 6e-06
+      }
+    },
+    "rls_life_pooled": {
+      "RT": {
+        "n": 20,
+        "pearson_r": -0.839825,
+        "p_value": 4e-06,
+        "slope_cycles_per_mohm": -9.782019,
+        "intercept": 1732.251304,
+        "resid_sd_cycles": 36.511984,
+        "loo_mae_cycles": 30.601862,
+        "mean_life": 412.9,
+        "sd_life": 65.465057,
+        "temperature": "RT",
+        "protocol": "pooled"
+      },
+      "45C": {
+        "n": 19,
+        "pearson_r": -0.836104,
+        "p_value": 8e-06,
+        "slope_cycles_per_mohm": -20.187314,
+        "intercept": 1369.40343,
+        "resid_sd_cycles": 39.300951,
+        "loo_mae_cycles": 34.175226,
+        "mean_life": 438.421053,
+        "sd_life": 69.623843,
+        "temperature": "45C",
+        "protocol": "pooled"
+      }
+    },
+    "rls_life_within_protocol": {
+      "RT_baseline": {
+        "n": 10,
+        "pearson_r": -0.754087,
+        "p_value": 0.011745,
+        "slope_cycles_per_mohm": -6.82121,
+        "intercept": 1311.938801,
+        "resid_sd_cycles": 18.401573,
+        "loo_mae_cycles": 15.69159,
+        "mean_life": 358.7,
+        "sd_life": 26.415694,
+        "temperature": "RT",
+        "protocol": "baseline"
+      },
+      "RT_fast": {
+        "n": 10,
+        "pearson_r": -0.075152,
+        "p_value": 0.836529,
+        "slope_cycles_per_mohm": -1.376291,
+        "intercept": 646.023382,
+        "resid_sd_cycles": 45.141865,
+        "loo_mae_cycles": 45.311028,
+        "mean_life": 467.1,
+        "sd_life": 42.680857,
+        "temperature": "RT",
+        "protocol": "fast"
+      },
+      "45C_baseline": {
+        "n": 9,
+        "pearson_r": -0.512448,
+        "p_value": 0.158374,
+        "slope_cycles_per_mohm": -10.468802,
+        "intercept": 889.859938,
+        "resid_sd_cycles": 30.797781,
+        "loo_mae_cycles": 24.479985,
+        "mean_life": 379.666667,
+        "sd_life": 33.548472,
+        "temperature": "45C",
+        "protocol": "baseline"
+      },
+      "45C_fast": {
+        "n": 10,
+        "pearson_r": -0.361751,
+        "p_value": 0.304349,
+        "slope_cycles_per_mohm": -15.156276,
+        "intercept": 1154.561429,
+        "resid_sd_cycles": 45.695851,
+        "loo_mae_cycles": 41.506403,
+        "mean_life": 491.3,
+        "sd_life": 46.212192,
+        "temperature": "45C",
+        "protocol": "fast"
+      }
+    },
+    "screening_models_RT": {
+      "baseline": {
+        "n": 10,
+        "pearson_r": -0.754087,
+        "p_value": 0.011745,
+        "slope_cycles_per_mohm": -6.82121,
+        "intercept": 1311.938801,
+        "resid_sd_cycles": 18.401573,
+        "loo_mae_cycles": 15.69159,
+        "mean_life": 358.7,
+        "sd_life": 26.415694,
+        "temperature": "RT",
+        "protocol": "baseline",
+        "uses_rls": true
+      },
+      "fast": {
+        "n": 10,
+        "pearson_r": -0.075152,
+        "p_value": 0.836529,
+        "slope_cycles_per_mohm": 0.0,
+        "intercept": 467.1,
+        "resid_sd_cycles": 42.680857,
+        "loo_mae_cycles": 45.311028,
+        "mean_life": 467.1,
+        "sd_life": 42.680857,
+        "temperature": "RT",
+        "protocol": "fast",
+        "uses_rls": false
+      }
+    },
+    "distributions_RT": {
+      "baseline": {
+        "cap_mean": 2.37021,
+        "cap_sd": 0.010323,
+        "rls_mean": 139.746295,
+        "rls_sd": 2.920262,
+        "n": 10
+      },
+      "fast": {
+        "cap_mean": 2.36445,
+        "cap_sd": 0.00566,
+        "rls_mean": 130.004011,
+        "rls_sd": 2.330588,
+        "n": 10
+      }
+    },
+    "rls_usl_mohm": {
+      "baseline": 141.683319,
+      "fast": null
+    }
+  },
+  "line": {
+    "cells_simulated": 1380000,
+    "days": 120,
+    "ramp_cells_per_day": [
+      3000,
+      20000
+    ],
+    "first_pass_yield": 0.962127,
+    "final_yield": 0.973267,
+    "fail_pareto": [
+      {
+        "mode": "RLS_HIGH",
+        "n_fail": 46275.0,
+        "share": 0.881093
+      },
+      {
+        "mode": "K_HIGH",
+        "n_fail": 5687.0,
+        "share": 0.108283
+      },
+      {
+        "mode": "CAP_LOW",
+        "n_fail": 558.0,
+        "share": 0.010625
+      }
+    ]
+  },
+  "triage": {
+    "score": {
+      "events": [
+        {
+          "event_id": "E1",
+          "kind": "measurement_error",
+          "detected": true,
+          "classified_as": "measurement_error",
+          "correct": true,
+          "delay_days": 0
+        },
+        {
+          "event_id": "E2",
+          "kind": "calculation_error",
+          "detected": true,
+          "classified_as": "calculation_error",
+          "correct": true,
+          "delay_days": 0
+        },
+        {
+          "event_id": "E3",
+          "kind": "true_quality_shift",
+          "detected": true,
+          "classified_as": "true_quality_shift",
+          "correct": true,
+          "delay_days": 0
+        }
+      ],
+      "n_detected": 3,
+      "n_correct": 3,
+      "n_events": 3,
+      "false_alarm_episodes": [
+        {
+          "mode": "K_HIGH",
+          "days": [
+            27,
+            27
+          ],
+          "classification": "unresolved"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "mode": "K_HIGH",
+        "days": [
+          27,
+          27
+        ],
+        "fail_rate": 0.004697,
+        "ref_rate": 0.002247,
+        "calc_mismatch_rate": 0.0,
+        "retest_pass_rate": 0.037037,
+        "top_factor": "aging_rack",
+        "hot_levels": [],
+        "hot_share_of_fails": 0.0,
+        "ml_importance": {
+          "grading_tester": -0.022679,
+          "formation_rack": -0.018988,
+          "aging_rack": -0.049798,
+          "electrode_lot": 0.011041,
+          "electrolyte_lot": 0.0,
+          "shift": -0.036913,
+          "protocol": 0.0
+        },
+        "classification": "unresolved"
+      },
+      {
+        "mode": "K_HIGH",
+        "days": [
+          55,
+          58
+        ],
+        "fail_rate": 0.009227,
+        "ref_rate": 0.002247,
+        "calc_mismatch_rate": 1.0,
+        "retest_pass_rate": 0.681081,
+        "top_factor": "aging_rack",
+        "hot_levels": [
+          "AG02",
+          "AG03",
+          "AG06",
+          "AG07",
+          "AG09",
+          "AG11",
+          "AG16",
+          "AG22",
+          "AG30",
+          "AG35",
+          "AG42",
+          "AG43",
+          "AG44",
+          "AG58"
+        ],
+        "hot_share_of_fails": 0.364865,
+        "ml_importance": {
+          "grading_tester": -0.007569,
+          "formation_rack": -0.006791,
+          "aging_rack": -0.003986,
+          "electrode_lot": 0.000859,
+          "electrolyte_lot": 0.0,
+          "shift": -0.000786,
+          "protocol": 0.0
+        },
+        "classification": "calculation_error"
+      },
+      {
+        "mode": "K_HIGH",
+        "days": [
+          87,
+          91
+        ],
+        "fail_rate": 0.03355,
+        "ref_rate": 0.002247,
+        "calc_mismatch_rate": 0.0,
+        "retest_pass_rate": 0.010578,
+        "top_factor": "electrode_lot",
+        "hot_levels": [
+          "AN078a",
+          "AN078b",
+          "AN079a",
+          "AN079b",
+          "AN080a",
+          "AN080b",
+          "AN081a",
+          "AN081b"
+        ],
+        "hot_share_of_fails": 0.988202,
+        "ml_importance": {
+          "grading_tester": 0.003754,
+          "formation_rack": 0.009051,
+          "aging_rack": 0.013069,
+          "electrode_lot": 0.107314,
+          "electrolyte_lot": 0.0,
+          "shift": -0.000122,
+          "protocol": 0.0
+        },
+        "classification": "true_quality_shift"
+      },
+      {
+        "mode": "CAP_LOW",
+        "days": [
+          30,
+          36
+        ],
+        "fail_rate": 0.001632,
+        "ref_rate": 0.000407,
+        "calc_mismatch_rate": 0.0,
+        "retest_pass_rate": 0.828947,
+        "top_factor": "grading_tester",
+        "hot_levels": [
+          "G07"
+        ],
+        "hot_share_of_fails": 0.776316,
+        "ml_importance": {
+          "grading_tester": 0.273294,
+          "formation_rack": 0.002539,
+          "aging_rack": -0.018608,
+          "electrode_lot": 0.006558,
+          "electrolyte_lot": 0.0,
+          "shift": 0.0,
+          "protocol": 0.0
+        },
+        "classification": "measurement_error"
+      }
+    ]
+  },
+  "capacity": {
+    "baseline_only": {
+      "first_day_over_capacity": 88,
+      "bottleneck_at_end": "formation",
+      "util_at_end": 1.28852,
+      "peak_backlog_cells": 72448.105263,
+      "cycle_time_end_h": 289.270996,
+      "cells_shipped": 1307551.894737,
+      "cells_demanded": 1380000.0
+    },
+    "plan": {
+      "first_day_over_capacity": 88,
+      "bottleneck_at_end": "grading",
+      "util_at_end": 0.979577,
+      "peak_backlog_cells": 3348.210526,
+      "cycle_time_end_h": 135.25,
+      "cells_shipped": 1380000.0,
+      "cells_demanded": 1380000.0
+    },
+    "fast_from_start": {
+      "first_day_over_capacity": null,
+      "bottleneck_at_end": "grading",
+      "util_at_end": 0.979577,
+      "peak_backlog_cells": 0.0,
+      "cycle_time_end_h": 135.25,
+      "cells_shipped": 1380000.0,
+      "cells_demanded": 1380000.0
+    },
+    "formation_channels_needed_at_end_volume": {
+      "baseline": 62092,
+      "fast": 16340
+    },
+    "installed_formation_channels": 40960,
+    "station_capacity_cells_per_day": {
+      "baseline": {
+        "formation": 15522,
+        "aging": 22539,
+        "grading": 20417
+      },
+      "fast": {
+        "formation": 58982,
+        "aging": 22539,
+        "grading": 20417
+      }
+    }
+  },
+  "duration_tradeoff": [
+    {
+      "protocol": "baseline",
+      "formation_hours": 56.0,
+      "formation_cost": 0.262208,
+      "aging_cost": 0.019,
+      "final_yield": 0.969391,
+      "scrap_cost_per_good_cell": 0.033693,
+      "warranty_claim_prob": 0.130999,
+      "warranty_cost": 0.785994,
+      "total": 1.100896,
+      "formation_capex_at_end_volume": 15523000.0
+    },
+    {
+      "protocol": "fast",
+      "formation_hours": 14.0,
+      "formation_cost": 0.07195,
+      "aging_cost": 0.019,
+      "final_yield": 0.997979,
+      "scrap_cost_per_good_cell": 0.001775,
+      "warranty_claim_prob": 0.000659,
+      "warranty_cost": 0.003952,
+      "total": 0.096677,
+      "formation_capex_at_end_volume": 4085000.0
+    }
+  ],
+  "rls_limit": {
+    "current_usl": 145.0,
+    "current": {
+      "rls_usl_mohm": 145.0,
+      "yield_rls": 0.959235,
+      "cell_claim_prob": 0.122131,
+      "pack_claim_prob": 0.566,
+      "median_pack_life": 329.237487,
+      "scrap_cost": 0.033398,
+      "warranty_cost": 0.732787,
+      "pack_warranty_cost": 3.396,
+      "cost_cell_view": 0.766185,
+      "cost_pack_view": 3.429398
+    },
+    "best_cell_view": {
+      "rls_usl_mohm": 142.0,
+      "yield_rls": 0.773295,
+      "cell_claim_prob": 0.056424,
+      "pack_claim_prob": 0.0625,
+      "median_pack_life": 338.460648,
+      "scrap_cost": 0.230395,
+      "warranty_cost": 0.338545,
+      "pack_warranty_cost": 0.375,
+      "cost_cell_view": 0.568939,
+      "cost_pack_view": 0.605395
+    },
+    "best_pack_view": {
+      "rls_usl_mohm": 141.0,
+      "yield_rls": 0.661757,
+      "cell_claim_prob": 0.034805,
+      "pack_claim_prob": 0.01,
+      "median_pack_life": 342.757733,
+      "scrap_cost": 0.401685,
+      "warranty_cost": 0.20883,
+      "pack_warranty_cost": 0.06,
+      "cost_cell_view": 0.610515,
+      "cost_pack_view": 0.461685
+    }
+  },
+  "change_approval": {
+    "n_pilot": 65816,
+    "n_concurrent_baseline": 197755,
+    "capacity_tost": {
+      "diff": -0.005719,
+      "margin": 0.011851,
+      "ci90": [
+        -0.005773,
+        -0.005664
+      ],
+      "p": 0.0,
+      "equivalent": true
+    },
+    "k_value_log_tost": {
+      "diff": 0.000662,
+      "margin": 0.09531,
+      "ci90": [
+        -0.00135,
+        0.002675
+      ],
+      "p": 0.0,
+      "equivalent": true
+    },
+    "rls_shift_mohm": -9.751414,
+    "rls_welch_p": 0.0,
+    "first_pass_yield": {
+      "new": 0.997736,
+      "ref": 0.95591,
+      "diff": 0.041826,
+      "lower_bound": 0.041008,
+      "margin": -0.003,
+      "noninferior": true
+    },
+    "lifetime_gain_cycles_RT": 108.4,
+    "lifetime_gain_ci95": [
+      78.4,
+      136.7
+    ],
+    "checks": {
+      "capacity_equivalent_0p5pct": true,
+      "k_value_equivalent_10pct": true,
+      "first_pass_yield_noninferior_0p3pp": true,
+      "lifetime_not_worse_public_data": true
+    },
+    "decision": "APPROVE",
+    "conditions": [
+      "R_LS limit was derived on baseline cells; fast formation moves R_LS by -9.8 mOhm and the public data show no within-protocol R_LS-life link for fast cells, so re-derive or retire the R_LS screen for fast-formed cells instead of reading the yield jump as a quality gain.",
+      "Capacity is equivalent within 0.5% but lower by about 5.7 mAh (more lithium consumed in formation): confirm against the capacity spec at the next grading-limit review.",
+      "Keep daily triage on K-value through rollout: self-discharge equivalence was shown on pilot volume only."
+    ]
+  }
+}
